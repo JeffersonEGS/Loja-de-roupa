@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="imagem-fundo">
+    <section id="lados">
+        <div class="esquerdo">
+            <div class="logo-esquerdo">
+                <img src="./imagem/logo.jpeg" alt="">
+                <div class="titulo-esquerdo">
+                    <span>Bem-Vindo</span><br>
+                </div>    
+                    <div class="subtitulo-esquerdo">
+                        <span>Nova conta</span>
+                    </div>
+                    <div class="contas">
+                        <img id="contato" src="./imagem/telefone.png" alt="">
+                        <img id="contato" src="./imagem/gmail.png" alt="">
+                        <img id="contato" src="./imagem/telegram.png" alt="">
+                    </div>
+            </div>
+        </div>
+        <div class="direito">
+            <div class="logo-direito">
+                    <div class="login">
+                        Login
+                    </div>
+                <form id="formaLogin">
+                    <div class="formulario">
+                        <input type="value" required="">
+                        <label id="usuario">
+                            <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">u</span><span style="transition-delay:150ms">á</span><span style="transition-delay:200ms">r</span><span style="transition-delay:250ms">i</span><span style="transition-delay:300ms">o</span>
+                        </label>
+                    </div>
+                    <div class="formulario">
+                        <input type="value" required="">
+                        <label id="password">
+                            <span style="transition-delay:0ms">S</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">n</span><span style="transition-delay:150ms">h</span><span style="transition-delay:200ms">a</span>
+                        </label>
+                    </div>
+                    <p id="error-message" class="error-message"></p>
+                </form>
+                    <div class="container">
+                        <input type="checkbox" id="caixa" style="display: none;">
+                        <label for="caixa" class="check">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                <polyline points="1 9 7 14 15 4"></polyline>
+                            </svg>
+                            <span>Lembrar-me</span>
+                        </label>
+                                <span id="senha">Esqueceu a senha?</span>
+                    </div>
+                    
+                    <button type="submit" id="entrar" href="index.html">
+                        <a href="index.html">Entrar</a>
+                    </button>
+            </div>
+        </div>
+    </section>
+</div>
+  <script src="scripts.js"></script>
+</body>
+</html>

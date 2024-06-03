@@ -1,0 +1,642 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 5px;
+    line-height: 1.6;
+}
+
+.button-container {
+  display: flex;
+  background-color: rgb(245, 73, 144);
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.button-container span {
+    cursor: pointer;
+    color: #FFF;
+}
+.button-container a{
+    text-decoration: none;
+    color: #CCC;
+}
+.button-container a:hover {
+    color: #FFF;
+}
+.button {
+  margin-left: 60px;
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #CCC;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 20px;
+}
+
+#logo {
+    width: 100px;
+    height: 100%;
+}
+
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  
+  .item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .item-carrinho .preco {
+    width: 100px;
+  }
+  
+  .item-carrinho .quantidade {
+    width: 30px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .botao-aumentar, .botao-diminuir {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  #finalizar-compra {
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+  }
+  
+
+
+
+
+/* Estilos do cabeçalho */
+header {
+    height: 100px;
+    background-color: rgba(245, 73, 144);
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-bottom: 50px;
+}
+header input {
+    margin-left: 5px;
+}
+.cima {
+    align-items: center;
+    display: flex;
+} 
+
+nav {
+    margin-bottom: 100px;
+    border: 1px solid #CCC;
+}
+
+nav img {
+    margin: 8px 3px 0px 5px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+nav img:hover {
+    transform: translateY(-3px);
+    transition: all ease-in-out 0.2s;
+}
+
+.menu-container {
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+}
+
+.menu-item {
+  position: relative;
+  margin: 0 10px;
+}
+
+.menu-button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+  background-color: #0056b3;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+  margin-top: 5px;
+}
+
+.submenu button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  border-bottom: 1px solid #ddd;
+}
+
+.submenu button:last-child {
+  border-bottom: none;
+}
+
+/* Estilos principais */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.roupas, .roupas2 {
+    margin: 20px;
+    display: flex;
+}
+
+.sub-add-roupa {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .sub-add-roupa-interna {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .sub-add-roupa:hover .sub-add-roupa-interna {
+    transform: rotateY(180deg);
+  }
+  
+  .sub-add-roupa-frente, .sub-add-roupa-tras {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+  }
+  
+  .sub-add-roupa-frente {
+    color: coral;
+  }
+  
+  .sub-add-roupa-tras {
+    color: white;
+    transform: rotateY(180deg);
+  }
+#add-roupa button {
+    margin-left: 20px;
+    --width: 210px;
+  --timing: 2s;
+  border: 0;
+  width: var(--width);
+  padding-block: 1em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  background: #007bff;
+  transition: all 0.2s;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#add-roupa button:hover {
+    background-image: linear-gradient(
+        to right,
+        rgb(250, 82, 82),
+        rgb(250, 82, 82) 16.65%,
+        rgb(190, 75, 219) 16.65%,
+        rgb(190, 75, 219) 33.3%,
+        rgb(76, 110, 245) 33.3%,
+        rgb(76, 110, 245) 49.95%,
+        rgb(64, 192, 87) 49.95%,
+        rgb(64, 192, 87) 66.6%,
+        rgb(250, 176, 5) 66.6%,
+        rgb(250, 176, 5) 83.25%,
+        rgb(253, 126, 20) 83.25%,
+        rgb(253, 126, 20) 100%,
+        rgb(250, 82, 82) 100%
+      );
+      animation: var(--timing) linear dance6123 infinite;
+      transform: scale(1.1) translateY(-1px);
+    }
+    @keyframes dance6123 {
+        to {
+          background-position: var(--width);
+        }
+      }
+
+#add-roupa img {
+    margin: 40px 20px 50px 20px ;
+    display: block;
+    width: 213px;
+    height: 308.69px;
+}
+#add-roupa span {
+    font-size: 13px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+/* Estilos da lista de roupas */
+#lista-roupas {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#roupas-container .roupa-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#roupas-container .roupa-item:last-child {
+    border-bottom: none;
+}
+
+.roupa-item button {
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.roupa-item button:hover {
+    background: #cc0000;
+}
+
+
+/* Estilos do carrinho */
+#carrinho {
+    margin-top: 20px;
+}
+
+#carrinho-container .carrinho-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#carrinho-container .carrinho-item:last-child {
+    border-bottom: none;
+}
+
+.carrinho-item button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.carrinho-item button:hover {
+    background: #0056b3;
+}
+
+.carrinho-item .quantidade {
+    display: flex;
+    align-items: center;
+}
+
+
+/*footer*/ 
+
+footer {
+  margin-top: 40px;
+  background-color: rgb(245, 73, 144);
+  padding: 10px;
+}
+
+.nav-footer {
+  display: flex;
+}
+
+.navegacao {
+  margin-left: 510px;
+  justify-content: center;
+  display: inline-block;
+  padding: 40px;
+}
+.navegacao h3 {
+  color: #FFF;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.navegacao a{
+  padding: 5px;
+  text-decoration: none;
+  color: #CCC;
+}
+.navegacao img {
+  margin-top: 20px;
+  cursor: pointer;
+  height: 19px;
+  margin-left: 10px;
+}
+
+.portfolio {
+  display: inline-block;
+  margin-left: 130px;
+  padding: 40px;
+}
+.portfolio h3 {
+  color: #FFF;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.portfolio a {
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+  color: #CCC;
+}
+.portfolio img {
+  margin-right: 10px;
+}
+.contato {
+  margin-left: 130px;
+  padding: 40px;
+}
+.contato h3 {
+  color: #FFF;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.contato a {
+  text-decoration: none;
+  color: #CCC;
+}
+.endereco {
+  color: #CCC;
+  text-align: center;
+  padding: 20px;
+}
+.endereco p {
+  font-style: italic;
+  font-size: 17px;
+}
+.endereco span {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+.endereco img {
+  height: 15px;
+  margin-top: 20px;
+}
+.privacidade{
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.privacidade a{
+  padding: 10px;
+  color: #CCC;
+}
+
+.feito {
+  text-align: center;
+  color: #FFF;
+  margin-top: 20px;
+}
+
+
+@media screen and (min-width: 344px) and (max-width: 1023px) {
+    .menu-container, .nav-footer {
+        flex-direction: column;
+    }
+    header {
+      font-size: 15px;
+      width: 100%;
+      height: 200px;
+    }
+    #pesquisa {
+      display: none;
+    }
+    #logo { 
+      margin-top: 70px;
+      width: 50px;
+      height: 50px;
+    }
+    .button {
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+    }
+    #barra-navegacao {
+      text-align: center;
+    }
+    .menu-container button{
+      margin: 10px;
+    }
+    .roupas, .roupas2 {
+      justify-content: center;
+      display: block;
+      margin: 40px;
+    }
+    #add-roupa img {
+      margin: 30px;
+      padding: 20px;
+      width: 300px;
+      height: auto;
+    }
+    #add-roupa span {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 15px;
+      display: block;
+    }
+    #add-roupa button {
+      margin-top: 20px;
+      margin-bottom: 100px;
+      margin-left: 68px;
+      
+    }
+    .navegacao, .portfolio, .contato, .endereco {
+        margin-left: 0;
+        text-align: center;
+    }
+    #lista-roupas {
+        margin: 5px;
+        font-size: 15px;
+        display: block;
+    }
+    #lista-roupas img {
+      margin-right: 10px;
+    }
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1370px) {
+  .menu-container, .nav-footer {
+      flex-direction: column;
+  }
+  header {
+    font-size: 23px;
+    width: 100%;
+    height: 200px;
+  }
+  .cima a {
+    font-size: 23px;
+  }
+  
+  #logo { 
+    margin-top: 70px;
+    width: 70px;
+    height: 70px;
+  }
+  .button {
+      margin-left: 10px;
+      margin-top: 10px;
+      font-size: 30px;
+      width: 40px;
+      height: 40px;
+  }
+  #barra-navegacao {
+    text-align: center;
+  }
+  .menu-item {
+    padding: 20px;
+  }
+  #barra-navegacao button {
+    text-align: center;
+    font-size: 23px;
+  }
+  .roupas, .roupas2 {
+    font-size: 23px;
+    justify-content: center;
+    display: grid;
+    margin: 40px;
+  }
+  #add-roupa img {
+    margin: 30px;
+    padding: 20px;
+    width: 300px;
+    height: auto;
+  }
+  #add-roupa span {
+    font-size: 23px;
+    text-align: center;
+    margin-top: 40px;
+    display: block;
+  }
+  #add-roupa button {
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 90px;
+    
+  }
+  .navegacao, .portfolio, .contato, .endereco {
+    margin-left: 0;
+    text-align: center;
+}
+  #lista-roupas {
+      margin: 5px;
+      font-size: 25px;
+      display: block;
+  }
+  #lista-roupas img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  #lista-roupas button {
+    font-size: 23px;
+    margin: 5px;
+  }
+  .size-select {
+    font-size: 23px;
+  }
+
+  .endereco img {
+    display: none;
+  }
+  #contato h3, #contato a, #contato p{
+    text-align: center;
+    display: block;
+    font-size: 23px;
+  }
+  
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas Infantis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img id="logo" src="./imagem/logo.jpeg" alt="">
+        <div id="inicio"></div>
+        <div class="cima">
+            <div class="button-container">
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" stroke-width="0" fill="currentColor" stroke="currentColor" class="icon">
+                        <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path>
+                    </svg>
+                </button>
+                <a href="#inicio">Inicio</a>
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="0" fill="currentColor" stroke="currentColor" class="icon">
+                        <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"></path>
+                    </svg>
+                </button>
+                <a href="login.html">Entrar</a>
+                <button class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
+                        <circle r="1" cy="21" cx="9"></circle>
+                        <circle r="1" cy="21" cx="20"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </button>
+                
+                <a href="#carrinho">Carrinho</a>
+                <button class="button" id="botao-pesquisar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
+                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+                <input type="text" name="" id="pesquisa" placeholder="O que você procura?">
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <nav>
+            <div id="barra-navegacao">
+                <div class="menu-container">
+                    <div class="menu-item">
+                        <button class="menu-button" onclick="alterarMenu('inverno-menu')">Inverno<img src="./imagem/seta.png" alt=""></button>
+                        <div id="inverno-menu" class="submenu">
+                            <button>Casaco</button>
+                            <button>Botas</button>
+                            <button>Acessórios</button>
+                        </div>
+                    </div>
+            
+                    <div class="menu-item">
+                        <button class="menu-button" onclick="alterarMenu('novidades-menu')">Novidades<img src="./imagem/seta.png" alt=""></button>
+                        <div id="novidades-menu" class="submenu">
+                            <button>Lançamentos</button>
+                            <button>Mais Vendidos</button>
+                            <button>Ofertas</button>
+                        </div>
+                    </div>
+            
+                    <div class="menu-item">
+                        <button class="menu-button" onclick="alterarMenu('categoria-menu')">Categoria<img src="./imagem/seta.png" alt=""></button>
+                        <div id="categoria-menu" class="submenu">
+                            <button>Roupas</button>
+                            <button>Calçados</button>
+                            <button>Acessórios</button>
+                        </div>
+                    </div>
+            
+                    <div class="menu-item">
+                        <button class="menu-button" onclick="alterarMenu('tamanho-menu')">Tamanho<img src="./imagem/seta.png" alt=""></button>
+                        <div id="tamanho-menu" class="submenu">
+                            <button>P</button>
+                            <button>M</button>
+                            <button>G</button>
+                        </div>
+                    </div>
+            
+                    <div class="menu-item">
+                        <button class="menu-button" onclick="alterarMenu('preco-menu')">Preço<img src="./imagem/seta.png" alt=""></button>
+                        <div id="preco-menu" class="submenu">
+                            <button>Até R$50,00</button>
+                            <button>R$50,00 - R$100,00</button>
+                            <button>Acima de R$100,00</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="roupas">
+            <section id="add-roupa">
+                <div class="sub-add-roupa">
+                    <div class="sub-add-roupa-interna">
+                        <div class="sub-add-roupa-frente">
+                            <img src="./imagem/roupa1.jpg" alt="">
+                        </div>
+                        <div class="sub-add-roupa-tras">
+                            <img src="./imagem/roupa1-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div><br>
+                <span>Jaqueta Puffer Hering Kids Bolsos Rosa</span>
+                <span class="preco">R$184,99</span>
+                <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+            </section>
+
+            <section id="add-roupa">
+                <div class="sub-add-roupa">
+                    <div class="sub-add-roupa-interna">
+                        <div class="sub-add-roupa-frente">
+                            <img src="./imagem/roupa2-2.jpg" alt="">
+                        </div>
+                        <div class="sub-add-roupa-tras">
+                            <img src="./imagem/roupa2.jpg" alt="">
+                        </div>
+                    </div>
+                </div><br>
+                <span>Blusa Cotton On Com Capuz Lilás</span>
+                <span class="preco">R$99,99</span>
+                <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+            </section>
+
+            <section id="add-roupa">
+                <div class="sub-add-roupa">
+                    <div class="sub-add-roupa-interna">
+                        <div class="sub-add-roupa-frente">
+                            <img src="./imagem/roupa3.jpg" alt="">
+                        </div>
+                        <div class="sub-add-roupa-tras">
+                            <img src="./imagem/roupa3-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div><br>
+                <span>Blusa de Moletom GAP Floral Rosa</span>
+                <span class="preco">R$199,99</span>
+                <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+            </section>
+        </div>
+        <br>
+        <div class="roupas2">
+            <section id="add-roupa">
+                <div class="sub-add-roupa">
+                    <div class="sub-add-roupa-interna">
+                        <div class="sub-add-roupa-frente">
+                            <img src="./imagem/roupa4.jpg" alt="">
+                        </div>
+                        <div class="sub-add-roupa-tras">
+                            <img src="./imagem/roupa4-4.jpg" alt="">
+                        </div>
+                    </div>
+                </div><br>
+                <span>Bolsa Inf. Fem. Mini Bag Blogueirinha</span>
+                <span class="preco">R$ 39,99</span>
+                <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+            </section>
+
+            <section id="add-roupa">
+                <div class="sub-add-roupa">
+                    <div class="sub-add-roupa-interna">
+                        <div class="sub-add-roupa-frente">
+                            <img src="./imagem/roupa5.jpg" alt="">
+                        </div>
+                        <div class="sub-add-roupa-tras">
+                            <img src="./imagem/roupa5-5.jpg" alt="">
+                        </div>
+                    </div>
+                </div><br> 
+                <span>Mochila Nike Brasilia Mini JDI Infantil</span>
+                <span class="preco">R$ 159,99</span>
+                <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+            </section>
+            
+            <section id="add-roupa">
+                <div class="sub-add-roupa">
+                    <div class="sub-add-roupa-interna">
+                        <div class="sub-add-roupa-frente">
+                            <img src="./imagem/roupa6.jpg" alt="">
+                        </div>
+                        <div class="sub-add-roupa-tras">
+                            <img src="./imagem/roupa6-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div><br>
+                <span>Óculos Solar Prorider Infantil Pink</span>
+                <span class="preco">R$ 44,00</span>
+                <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+            </section>
+        </div>
+<br>
+<div class="roupas2">
+    <section id="add-roupa">
+        <div class="sub-add-roupa">
+            <div class="sub-add-roupa-interna">
+                <div class="sub-add-roupa-frente">
+                    <img src="./imagem/roupa7.jpg" alt="">
+                </div>
+                <div class="sub-add-roupa-tras">
+                    <img src="./imagem/roupa7-7.jpg" alt="">
+                </div>
+            </div>
+        </div><br>
+        <span>Bota Infantil Pampili Jujuba Grafite</span>
+        <span class="preco">R$149,99</span>
+        <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+    </section>
+
+    <section id="add-roupa">
+        <div class="sub-add-roupa">
+            <div class="sub-add-roupa-interna">
+                <div class="sub-add-roupa-frente">
+                    <img src="./imagem/roupa8.jpg" alt="">
+                </div>
+                <div class="sub-add-roupa-tras">
+                    <img src="./imagem/roupa8-8.jpg" alt="">
+                </div>
+            </div>
+        </div><br>
+        <span>Tênis Infantil Converse Chuck Taylor</span>
+        <span class="preco">R$189,90</span>
+        <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+    </section>
+    
+    <section id="add-roupa">
+        <div class="sub-add-roupa">
+            <div class="sub-add-roupa-interna">
+                <div class="sub-add-roupa-frente">
+                    <img src="./imagem/roupa9.jpg" alt="">
+                </div>
+                <div class="sub-add-roupa-tras">
+                    <img src="./imagem/roupa9-9.jpg" alt="">
+                </div>
+            </div>
+        </div><br>
+        <span>Bota Infantil Kidy Tachas Metalizadas</span>
+        <span class="preco">R$114,99</span>
+        <button type="button" id="add-carrinho">Adicionar ao carrinho</button>
+    </section>
+</div>
+<br>
+        <section id="lista-roupas">
+            <h2 id="carrinho">Carrinho</h2>
+            <div id="roupas-container"></div>
+            <div id="total-preco">Total: R$0.00</div>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </section>
+    
+    </main>
+
+
+
+    <footer id="contato">
+        <div class="nav-footer">
+            <div class="navegacao">
+                <h3>Navegação</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#Social">Social</a> <br>
+                <img src="./imagem/facebook.png" alt="">
+                <img src="./imagem/instagram.png" alt="">
+                <img src="./imagem/telefone.png" alt="">
+            </div>
+            <div class="portfolio">
+                <h3>Entregas</h3>
+                <a><img src="./imagem/frete.jpg" alt="">Frete grátis</a><br>
+                <a><img src="./imagem/entrega.jpg" alt="">Entrega Rápida</a><br>
+                <a><img src="./imagem/troca.jpg" alt="">Troca grátis</a><br>
+                <a><img src="./imagem/retira.jpg" alt="">Retira fácil</a><br>
+            </div>
+            <div class="contato">
+                <h3>Contato</h3>
+                <a href="#contato">Fale conosco</a>
+            </div>
+        </div>
+
+            <div class="endereco">
+                <h2></h2> <br>
+                <p>Rua: Endereço ficticio nº 190,  Vassouras/RJ</p>
+                <img src="./imagem/telefone.png" alt=""> Telefone: (24) 99257-4517
+            
+            </div>
+
+            <div class="privacidade">
+                <a href="">Politica de Privacidade</a>
+                <a href="">Termos de Uso</a>
+            </div>
+
+
+            <div class="feito">&copy;Jefferson da Silva</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
